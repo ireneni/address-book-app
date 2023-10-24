@@ -1,11 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    declarations: [
+      AppComponent,
+      HeaderComponent
+    ]
   }));
 
   it('should create the app', () => {
@@ -20,10 +25,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('address-book-app');
   });
 
-  it('should render title', () => {
+  it(`should have a header with text "address book"`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('address-book-app app is running!');
+    const headerElement = fixture.nativeElement.querySelector('h1');
+    expect(headerElement).toBeTruthy();
+    expect(headerElement.textContent).toContain('address book');
   });
 });

@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AddressBookService } from 'src/app/services/address-book.service';
-import { Contact } from 'src/app/models/contact.model';
+import { Contact, DefaultContact } from 'src/app/models/contact.model';
 
 @Component({
   selector: 'app-contacts-list',
@@ -9,7 +9,7 @@ import { Contact } from 'src/app/models/contact.model';
   styleUrls: ['./contacts-list.component.scss'],
 })
 export class ContactsListComponent implements OnInit {
-  contacts: Contact[] = [];
+  contacts: Contact[] = [DefaultContact];
 
   constructor(
     private addressBookService: AddressBookService,
@@ -28,6 +28,7 @@ export class ContactsListComponent implements OnInit {
     );
   }
 
+  /*   sort contacts in ascending alphabetical order  */
   sortContacts(data: any): void {
     data.sort(function (a: Contact, b: Contact) {
       return a.name.first.localeCompare(b.name.first);

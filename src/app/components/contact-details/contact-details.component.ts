@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Contact } from 'src/app/models/contact.model';
+import { Contact, DefaultContact } from 'src/app/models/contact.model';
 
 @Component({
   selector: 'app-contact-details',
@@ -9,20 +9,8 @@ import { Contact } from 'src/app/models/contact.model';
 })
 export class ContactDetailsComponent implements OnInit {
   /*   Created a default template to guard against type error  */
-  contact: Contact = {
-    cell: '063-8165-153',
-    email: 'stanimir.andelkovic@example.com',
-    location: {
-      street: { name: 'Milene Čupić', number: 5323 },
-      city: 'Arilje',
-      country: 'Serbia',
-      postcode: 26051,
-    },
-    name: { first: 'Stanimir', last: 'Anđelković' },
-    picture: { large: 'https://randomuser.me/api/portraits/men/43.jpg' },
-  };
+  contact: Contact = DefaultContact;
 
-  detailsRetrieved: boolean = false;
   showAddress: boolean = true;
   showContactInfo: boolean = false;
 
@@ -32,10 +20,7 @@ export class ContactDetailsComponent implements OnInit {
     const state = this.route.snapshot.root.firstChild?.routeConfig?.path; // Get route state
     if (state === 'details') {
       this.contact = history.state.contact; // Access contact object from state
-      this.detailsRetrieved = true;
-    } else {
-      this.detailsRetrieved = false;
-    }
+    } 
   }
 
   getFullAddress(): string {
