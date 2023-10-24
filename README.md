@@ -26,6 +26,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - Breakpoints and mobile first design to ensure responsiveness
 - Use of Angular services/observables/directives/routing
 - CSS hover animations
+- Sorting for contacts list
 - Use of images
 
 ## Features
