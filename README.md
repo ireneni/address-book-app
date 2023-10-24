@@ -4,24 +4,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+cd into address-book-app. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Approach 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Started out by laying out the requirements from the scenario
+- Designed simple UI in Figma with header, contact list and contact details components
+- Created an interface for the API payload so it would be easier to work with and document
+- Created a service to handle API calls.
+- Set up contacts list component to fetch data from service
+- Built out UI of components and styled with CSS
+- Set up routing for navigation between contact list and details page
+- added unit tests
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Features
+- Some use of semantic html (e.g header)
+- Breakpoints and mobile first design to ensure responsiveness
+- Use of Angular services/observables/directives/routing
+- CSS hover animations
+- Use of images
