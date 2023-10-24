@@ -1,0 +1,21 @@
+header {
+    background-color: black; 
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+header > h1 {
+    margin: 0;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.header-icon {
+    width: 40px;
+    opacity: 0px;
+
+}

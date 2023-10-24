@@ -1,0 +1,9 @@
+<div class="contacts-table">
+  <h2>Contacts ({{ contacts.length }}) </h2>
+  <div *ngFor="let contact of contacts" class="contact-row" (click)="navigateToDetails(contact)">
+    <span class="name">{{ contact.name.first }} {{ contact.name.last }}</span>
+    <br>
+    <span class="address">{{ getAddress(contact) }}</span>
+    <hr>
+  </div>
+</div>
