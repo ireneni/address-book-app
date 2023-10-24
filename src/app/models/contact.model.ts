@@ -13,13 +13,13 @@ export interface Contact {
 
 export const DefaultContact: Contact = {
   cell: '063-8165-153',
-  email: 'stanimir.andelkovic@example.com',
+  email: 'sherlock@example.com',
   location: {
-    street: { name: 'Milene Čupić', number: 5323 },
-    city: 'Arilje',
-    country: 'Serbia',
-    postcode: 26051,
+    street: { name: 'Baker St', number: 221 },
+    city: 'London',
+    country: 'England',
+    postcode: 'NW1 6XE',
   },
-  name: { first: 'Stanimir', last: 'Anđelković' },
+  name: { first: 'Sherlock', last: 'Holmes' },
   picture: { large: 'https://randomuser.me/api/portraits/men/43.jpg' },
 }
