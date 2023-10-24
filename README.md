@@ -29,7 +29,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - Sorting for contacts list
 - Use of images
 
-## Features
+## Future Improvements
 - More robust unit testing that mocks service rather than relying on default contact
 - Have details open in split screen for desktop view
 - Introduce navigation buttons
