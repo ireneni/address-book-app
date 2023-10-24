@@ -26,6 +26,11 @@ h1 {
   font-weight: 400;
 }
 
+.address:hover,
+.contact:hover {
+  text-decoration: underline;
+}
+
 .address-icon,
 .contact-icon {
   width: 25px;
@@ -36,7 +41,6 @@ h1 {
 }
 
 .selected {
-  text-decoration: underline;
   color: black;
 
   .address-icon,
