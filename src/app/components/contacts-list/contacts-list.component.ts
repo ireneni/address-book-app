@@ -6,23 +6,32 @@ import { Contact } from 'src/app/models/contact.model';
 @Component({
   selector: 'app-contacts-list',
   templateUrl: './contacts-list.component.html',
-  styleUrls: ['./contacts-list.component.scss']
+  styleUrls: ['./contacts-list.component.scss'],
 })
 export class ContactsListComponent implements OnInit {
   contacts: Contact[] = [];
 
-  constructor(private addressBookService: AddressBookService, private router: Router) { }
+  constructor(
+    private addressBookService: AddressBookService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.addressBookService.getContact().subscribe(
-      data => {
+      (data) => {
+        this.sortContacts(data.results);
         this.contacts = data.results;
-        console.log(this.contacts);
       },
-      error => {
-        console.error(error); // Log errors to the console
+      (error) => {
+        console.error(error);
       }
     );
+  }
+
+  sortContacts(data: any): void {
+    data.sort(function (a: Contact, b: Contact) {
+      return a.name.first.localeCompare(b.name.first);
+    });
   }
 
   getAddress(contact: Contact): string {
@@ -33,5 +42,4 @@ export class ContactsListComponent implements OnInit {
   navigateToDetails(contact: Contact) {
     this.router.navigate(['/details'], { state: { contact } });
   }
-
 }

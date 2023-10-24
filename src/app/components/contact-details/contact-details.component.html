@@ -1,6 +1,12 @@
 <div *ngIf="detailsRetrieved">
   <div class="profile">
-    <img src="{{ contact.picture.large }}" class="profile-photo" />
+    <img
+      src="{{ contact.picture.large }}"
+      class="profile-photo"
+      alt="contact profile picture"
+      height="150"
+      width="150"
+    />
     <h1>{{ contact.name.first }} {{ contact.name.last }}</h1>
   </div>
   <div class="display-options">
@@ -23,10 +29,10 @@
   </div>
   <div class="details">
     <div *ngIf="showAddress">
-        <p [innerHTML]="getFullAddress()"></p>
-      </div>
-      <div *ngIf="showContactInfo">
-        <p [innerHTML]="getContactInfo()"></p>
-      </div>
+      <p [innerHTML]="getFullAddress()"></p>
+    </div>
+    <div *ngIf="showContactInfo">
+      <p [innerHTML]="getContactInfo()"></p>
+    </div>
   </div>
 </div>

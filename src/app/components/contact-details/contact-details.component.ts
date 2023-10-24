@@ -8,6 +8,7 @@ import { Contact } from 'src/app/models/contact.model';
   styleUrls: ['./contact-details.component.scss'],
 })
 export class ContactDetailsComponent implements OnInit {
+  /*   Created a default template to guard against type error  */
   contact: Contact = {
     cell: '063-8165-153',
     email: 'stanimir.andelkovic@example.com',
@@ -30,7 +31,7 @@ export class ContactDetailsComponent implements OnInit {
   ngOnInit() {
     const state = this.route.snapshot.root.firstChild?.routeConfig?.path; // Get route state
     if (state === 'details') {
-      this.contact = history.state.contact; // Access person object from state
+      this.contact = history.state.contact; // Access contact object from state
       this.detailsRetrieved = true;
     } else {
       this.detailsRetrieved = false;
@@ -40,7 +41,6 @@ export class ContactDetailsComponent implements OnInit {
   getFullAddress(): string {
     let location = this.contact.location;
     let street = `${location.street.number} ${location.street.name}`;
-    console.log(street);
     return `${street} <br> ${location.postcode} <br> ${location.city}, ${location.country}`;
   }
 

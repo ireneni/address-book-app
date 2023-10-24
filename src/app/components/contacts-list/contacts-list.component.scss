@@ -1,39 +1,41 @@
-h2 {
-    font-weight: 600;
-    font-size: 24px;
-    padding-left: 15px;
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
 }
 
-.contacts-table {
-    display: flex;
-    flex-direction: column;
-    margin: 25px;
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+.contacts-list {
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 .contact-row {
-    height: 70px;
+  height: 70px;
 }
 .contact-row > span {
-    padding-left: 15px;
+  padding-left: 15px;
 }
-
 .contact-row:hover {
-    background-color: #ECECEC;
-    transition: all 200ms linear;
+  background-color: #ececec;
+  transition: all 200ms linear;
 }
 
 .name {
-    display:inline-block;
-    font-weight: 400;
-    font-size: 20px;
-    padding-top: 15px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 15px;
 }
 
 .address {
-    display:inline-block;
-    font-weight: 300;
-    font-size: 18px;
-    padding-bottom: 5px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 18px;
+  padding-bottom: 5px;
 }
-
-
